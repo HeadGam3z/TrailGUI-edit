@@ -68,6 +68,7 @@ public class PlayerTrailData {
 		getFile().addDefault("EnderSignal", false);
 		getFile().addDefault("IconCrack", false);
 		getFile().addDefault("BlockBreak", false);
+		getFile().addDefault("Enchantment", false);
 	}
 	
 	/**
@@ -719,6 +720,26 @@ public class PlayerTrailData {
 	 */
 	public boolean hasBlockBreak() {
 		return getFile().getBoolean("BlockBreak");
+	}
+	
+	/**
+	 * Sets the player's Enchantment value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setEnchantment(boolean value) {
+		getFile().set("Enchantment", value);
+	}
+	
+	/**
+	 * Checks if the player has Enchantment set to true.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean hasEnchantment() {
+		return getFile().getBoolean("Enchantment");
 	}
 	
 }
