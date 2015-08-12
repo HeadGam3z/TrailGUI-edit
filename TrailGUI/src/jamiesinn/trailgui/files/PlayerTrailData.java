@@ -1,5 +1,7 @@
 package jamiesinn.trailgui.files;
 
+import jamiesinn.trailgui.Main;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -16,6 +18,7 @@ public class PlayerTrailData {
 	
 	private File srcFolder, dataFolder, file;
 	private FileConfiguration fileConfig;
+	private String uuid;
 	
 	/**
 	 * Creates a player trail data (ptd) file for the player in the data directory.
@@ -28,6 +31,7 @@ public class PlayerTrailData {
 		this.dataFolder = new File(srcFolder, "data");
 		this.file = new File(dataFolder, player.getUniqueId() + ".ptd"); // clever, right? player trail data (.ptd)
 		this.fileConfig = YamlConfiguration.loadConfiguration(file);
+		this.uuid = player.getUniqueId().toString();
 		this.addDefaultValues();
 	}
 	
@@ -129,7 +133,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setAngryVillager(boolean value) {
-		getFile().set("AngryVillager", value);
+		if (!hasAngryVillager() == value) {
+			getFile().set("AngryVillager", value);
+		}
+		if (value) {
+			Main.trailAngryVillager.add(uuid);
+		} else {
+			Main.trailAngryVillager.remove(uuid);
+		}
 	}
 	
 	/**
@@ -149,7 +160,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setCloud(boolean value) {
-		getFile().set("Cloud", value);
+		if (!hasCloud() == value) {
+			getFile().set("Cloud", value);
+		}
+		if (value) {
+			Main.trailCloud.add(uuid);
+		} else {
+			Main.trailCloud.remove(uuid);
+		}
 	}
 	
 	/**
@@ -169,7 +187,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setCriticals(boolean value) {
-		getFile().set("Criticals", value);
+		if (!hasCriticals() == value) {
+			getFile().set("Criticals", value);
+		}
+		if (value) {
+			Main.trailCriticals.add(uuid);
+		} else {
+			Main.trailCriticals.remove(uuid);
+		}
 	}
 	
 	/**
@@ -189,7 +214,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setDripLava(boolean value) {
-		getFile().set("DripLava", value);
+		if (!hasDripLava() == value) {
+			getFile().set("DripLava", value);
+		}
+		if (value) {
+			Main.trailDripLava.add(uuid);
+		} else {
+			Main.trailDripLava.remove(uuid);
+		}
 	}
 	
 	/**
@@ -209,7 +241,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setDripWater(boolean value) {
-		getFile().set("DripWater", value);
+		if (!hasDripWater() == value) {
+			getFile().set("DripWater", value);
+		}
+		if (value) {
+			Main.trailDripWater.add(uuid);
+		} else {
+			Main.trailDripWater.remove(uuid);
+		}
 	}
 	
 	/**
@@ -229,7 +268,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setSpark(boolean value) {
-		getFile().set("Spark", value);
+		if (!hasSpark() == value) {
+			getFile().set("Spark", value);
+		}
+		if (value) {
+			Main.trailSpark.add(uuid);
+		} else {
+			Main.trailSpark.remove(uuid);
+		}
 	}
 	
 	/**
@@ -249,7 +295,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setFlame(boolean value) {
-		getFile().set("Flame", value);
+		if (!hasFlame() == value) {
+			getFile().set("Flame", value);
+		}
+		if (value) {
+			Main.trailFlame.add(uuid);
+		} else {
+			Main.trailFlame.remove(uuid);
+		}
 	}
 	
 	/**
@@ -269,7 +322,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setHappyVillager(boolean value) {
-		getFile().set("HappyVillager", value);
+		if (!hasHappyVillager() == value) {
+			getFile().set("HappyVillager", value);
+		}
+		if (value) {
+			Main.trailHappyVillager.add(uuid);
+		} else {
+			Main.trailHappyVillager.remove(uuid);
+		}
 	}
 	
 	/**
@@ -289,7 +349,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setInstantSpell(boolean value) {
-		getFile().set("InstantSpell", value);
+		if (!hasInstantSpell() == value) {
+			getFile().set("InstantSpell", value);
+		}
+		if (value) {
+			Main.trailInstantSpell.add(uuid);
+		} else {
+			Main.trailInstantSpell.remove(uuid);
+		}
 	}
 	
 	/**
@@ -309,7 +376,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setLargeSmoke(boolean value) {
-		getFile().set("LargeSmoke", value);
+		if (!hasLargeSmoke() == value) {
+			getFile().set("LargeSmoke", value);
+		}
+		if (value) {
+			Main.trailLargeSmoke.add(uuid);
+		} else {
+			Main.trailLargeSmoke.remove(uuid);
+		}
 	}
 	
 	/**
@@ -329,7 +403,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setLava(boolean value) {
-		getFile().set("Lava", value);
+		if (!hasLava() == value) {
+			getFile().set("Lava", value);
+		}
+		if (value) {
+			Main.trailLava.add(uuid);
+		} else {
+			Main.trailLava.remove(uuid);
+		}
 	}
 	
 	/**
@@ -349,7 +430,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setMagicCrit(boolean value) {
-		getFile().set("MagicCrit", value);
+		if (!hasMagicCrit() == value) {
+			getFile().set("MagicCrit", value);
+		}
+		if (value) {
+			Main.trailMagicCrit.add(uuid);
+		} else {
+			Main.trailMagicCrit.remove(uuid);
+		}
 	}
 	
 	/**
@@ -369,7 +457,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setMobSpell(boolean value) {
-		getFile().set("MobSpell", value);
+		if (!hasMobSpell() == value) {
+			getFile().set("MobSpell", value);
+		}
+		if (value) {
+			Main.trailMobSpell.add(uuid);
+		} else {
+			Main.trailMobSpell.remove(uuid);
+		}
 	}
 	
 	/**
@@ -389,7 +484,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setMobSpellAmbient(boolean value) {
-		getFile().set("MobSpellAmbient", value);
+		if (!hasMobSpellAmbient() == value) {
+			getFile().set("MobSpellAmbient", value);
+		}
+		if (value) {
+			Main.trailMobSpellAmbient.add(uuid);
+		} else {
+			Main.trailMobSpellAmbient.remove(uuid);
+		}
 	}
 	
 	/**
@@ -409,7 +511,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setNote(boolean value) {
-		getFile().set("Note", value);
+		if (!hasNote() == value) {
+			getFile().set("Note", value);
+		}
+		if (value) {
+			Main.trailNote.add(uuid);
+		} else {
+			Main.trailNote.remove(uuid);
+		}
 	}
 	
 	/**
@@ -429,7 +538,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setPortal(boolean value) {
-		getFile().set("Portal", value);
+		if (!hasPortal() == value) {
+			getFile().set("Portal", value);
+		}
+		if (value) {
+			Main.trailPortal.add(uuid);
+		} else {
+			Main.trailPortal.remove(uuid);
+		}
 	}
 	
 	/**
@@ -449,7 +565,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setRedDust(boolean value) {
-		getFile().set("RedDust", value);
+		if (!hasRedDust() == value) {
+			getFile().set("RedDust", value);
+		}
+		if (value) {
+			Main.trailRedDust.add(uuid);
+		} else {
+			Main.trailRedDust.remove(uuid);
+		}
 	}
 	
 	/**
@@ -469,7 +592,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setColoredRedDust(boolean value) {
-		getFile().set("ColoredRedDust", value);
+		if (!hasColoredRedDust() == value) {
+			getFile().set("ColoredRedDust", value);
+		}
+		if (value) {
+			Main.trailColoredRedDust.add(uuid);
+		} else {
+			Main.trailColoredRedDust.remove(uuid);
+		}
 	}
 	
 	/**
@@ -489,7 +619,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setSlime(boolean value) {
-		getFile().set("Slime", value);
+		if (!hasSlime() == value) {
+			getFile().set("Slime", value);
+		}
+		if (value) {
+			Main.trailSlime.add(uuid);
+		} else {
+			Main.trailSlime.remove(uuid);
+		}
 	}
 	
 	/**
@@ -509,7 +646,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setSnowShovel(boolean value) {
-		getFile().set("SnowShovel", value);
+		if (!hasSnowShovel() == value) {
+			getFile().set("SnowShovel", value);
+		}
+		if (value) {
+			Main.trailSnowShovel.add(uuid);
+		} else {
+			Main.trailSnowShovel.remove(uuid);
+		}
 	}
 	
 	/**
@@ -529,7 +673,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setSnowballPoof(boolean value) {
-		getFile().set("SnowballPoof", value);
+		if (!hasSnowballPoof() == value) {
+			getFile().set("SnowballPoof", value);
+		}
+		if (value) {
+			Main.trailSnowballPoof.add(uuid);
+		} else {
+			Main.trailSnowballPoof.remove(uuid);
+		}
 	}
 	
 	/**
@@ -549,7 +700,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setSpell(boolean value) {
-		getFile().set("Spell", value);
+		if (!hasSpell() == value) {
+			getFile().set("Spell", value);
+		}
+		if (value) {
+			Main.trailSpell.add(uuid);
+		} else {
+			Main.trailSpell.remove(uuid);
+		}
 	}
 	
 	/**
@@ -569,7 +727,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setSplash(boolean value) {
-		getFile().set("Splash", value);
+		if (!hasSplash() == value) {
+			getFile().set("Splash", value);
+		}
+		if (value) {
+			Main.trailSplash.add(uuid);
+		} else {
+			Main.trailSplash.remove(uuid);
+		}
 	}
 	
 	/**
@@ -589,7 +754,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setTownAura(boolean value) {
-		getFile().set("TownAura", value);
+		if (!hasTownAura() == value) {
+			getFile().set("TownAura", value);
+		}
+		if (value) {
+			Main.trailTownAura.add(uuid);
+		} else {
+			Main.trailTownAura.remove(uuid);
+		}
 	}
 	
 	/**
@@ -609,7 +781,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setWake(boolean value) {
-		getFile().set("Wake", value);
+		if (!hasWake() == value) {
+			getFile().set("Wake", value);
+		}
+		if (value) {
+			Main.trailWake.add(uuid);
+		} else {
+			Main.trailWake.remove(uuid);
+		}
 	}
 	
 	/**
@@ -629,7 +808,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setWitchMagic(boolean value) {
-		getFile().set("WitchMagic", value);
+		if (!hasWitchMagic() == value) {
+			getFile().set("WitchMagic", value);
+		}
+		if (value) {
+			Main.trailWitchMagic.add(uuid);
+		} else {
+			Main.trailWitchMagic.remove(uuid);
+		}
 	}
 	
 	/**
@@ -649,7 +835,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setHearts(boolean value) {
-		getFile().set("Hearts", value);
+		if (!hasHearts() == value) {
+			getFile().set("Hearts", value);
+		}
+		if (value) {
+			Main.trailHearts.add(uuid);
+		} else {
+			Main.trailHearts.remove(uuid);
+		}
 	}
 	
 	/**
@@ -669,7 +862,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setEnderSignal(boolean value) {
-		getFile().set("EnderSignal", value);
+		if (!hasEnderSignal() == value) {
+			getFile().set("EnderSignal", value);
+		}
+		if (value) {
+			Main.trailEnderSignal.add(uuid);
+		} else {
+			Main.trailEnderSignal.remove(uuid);
+		}
 	}
 	
 	/**
@@ -689,7 +889,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setIconCrack(boolean value) {
-		getFile().set("IconCrack", value);
+		if (!hasIconCrack() == value) {
+			getFile().set("IconCrack", value);
+		}
+		if (value) {
+			Main.trailIconCrack.add(uuid);
+		} else {
+			Main.trailIconCrack.remove(uuid);
+		}
 	}
 	
 	/**
@@ -709,7 +916,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setBlockBreak(boolean value) {
-		getFile().set("BlockBreak", value);
+		if (!hasBlockBreak() == value) {
+			getFile().set("BlockBreak", value);
+		}
+		if (value) {
+			Main.trailBlockBreak.add(uuid);
+		} else {
+			Main.trailBlockBreak.remove(uuid);
+		}
 	}
 	
 	/**
@@ -729,7 +943,14 @@ public class PlayerTrailData {
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
 	public void setEnchantment(boolean value) {
-		getFile().set("Enchantment", value);
+		if (!hasEnchantment() == value) {
+			getFile().set("Enchantment", value);
+		}
+		if (value) {
+			Main.trailEnchantment.add(uuid);
+		} else {
+			Main.trailEnchantment.remove(uuid);
+		}
 	}
 	
 	/**
