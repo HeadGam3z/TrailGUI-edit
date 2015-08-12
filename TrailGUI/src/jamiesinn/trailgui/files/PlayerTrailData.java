@@ -601,4 +601,124 @@ public class PlayerTrailData {
 		return getFile().getBoolean("TownAura");
 	}
 	
+	/**
+	 * Sets the player's Wake value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setWake(boolean value) {
+		getFile().set("Wake", value);
+	}
+	
+	/**
+	 * Gets the player's Wake value.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean getWake() {
+		return getFile().getBoolean("Wake");
+	}
+	
+	/**
+	 * Sets the player's WitchMagic value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setWitchMagic(boolean value) {
+		getFile().set("WitchMagic", value);
+	}
+	
+	/**
+	 * Gets the player's WitchMagic value.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean getWitchMagic() {
+		return getFile().getBoolean("WitchMagic");
+	}
+	
+	/**
+	 * Sets the player's Hearts value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setHearts(boolean value) {
+		getFile().set("Hearts", value);
+	}
+	
+	/**
+	 * Gets the player's Hearts value.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean getHearts() {
+		return getFile().getBoolean("Hearts");
+	}
+	
+	/**
+	 * Sets the player's EnderSignal value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setEnderSignal(boolean value) {
+		getFile().set("EnderSignal", value);
+	}
+	
+	/**
+	 * Gets the player's EnderSignal value.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean getEnderSignal() {
+		return getFile().getBoolean("EnderSignal");
+	}
+	
+	/**
+	 * Sets the player's IconCrack value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setIconCrack(boolean value) {
+		getFile().set("IconCrack", value);
+	}
+	
+	/**
+	 * Gets the player's IconCrack value.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean getIconCrack() {
+		return getFile().getBoolean("IconCrack");
+	}
+	
+	/**
+	 * Sets the player's BlockBreak value.
+	 * 
+	 * @param value true or false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public void setBlockBreak(boolean value) {
+		getFile().set("BlockBreak", value);
+	}
+	
+	/**
+	 * Gets the player's BlockBreak value.
+	 * 
+	 * @return true if true, otherwise false
+	 * @author Jesse McCullough (HeadGam3z)
+	 */
+	public boolean getBlockBreak() {
+		return getFile().getBoolean("BlockBreak");
+	}
+	
 }
