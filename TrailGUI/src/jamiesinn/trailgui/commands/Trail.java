@@ -15,100 +15,102 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@SuppressWarnings("deprecation")
 public class Trail implements CommandExecutor, TabCompleter {
-	List<String> trailList1 = new ArrayList<String>();
-	List<String> trailList2 = new ArrayList<String>();
-	Main main;
+	
+	private List<String> trailList1;
+	private List<String> trailList2;
+	private Main main;
 
 	public Trail(Main main) {
+		this.trailList1 = new ArrayList<String>();
+		this.trailList2 = new ArrayList<String>();
 		this.main = main;
 	}
 
 	public List<String> onTabComplete(CommandSender sender, Command cmd,
 			String commandLabel, String[] args) {
 		if (args.length == 1) {
-			this.trailList1.clear();
-			this.trailList1.add("AngryVillager");
-			this.trailList1.add("Cloud");
-			this.trailList1.add("Criticals");
-			this.trailList1.add("DripLava");
-			this.trailList1.add("DripWater");
-			this.trailList1.add("Enchantment");
-			this.trailList1.add("Spark");
-			this.trailList1.add("Flame");
-			this.trailList1.add("HappyVillager");
-			this.trailList1.add("InstantSpell");
-			this.trailList1.add("LargeSmoke");
-			this.trailList1.add("Lava");
-			this.trailList1.add("MagicCrit");
-			this.trailList1.add("MobSpell");
-			this.trailList1.add("MobSpellAmbient");
-			this.trailList1.add("Note");
-			this.trailList1.add("Portal");
-			this.trailList1.add("RedDust");
-			this.trailList1.add("ColoredRedDust");
-			this.trailList1.add("Slime");
-			this.trailList1.add("SnowShovel");
-			this.trailList1.add("SnowballPoof");
-			this.trailList1.add("Spell");
-			this.trailList1.add("Splash");
-			this.trailList1.add("TownAura");
-			this.trailList1.add("Wake");
-			this.trailList1.add("WitchMagic");
-			this.trailList1.add("Hearts");
-			this.trailList1.add("EnderSignal");
-			this.trailList1.add("IconCrack");
-			this.trailList1.add("ClearAll");
-
-			Collections.sort(this.trailList1);
-			return this.trailList1;
+			trailList1.clear();
+			trailList1.add("AngryVillager");
+			trailList1.add("Cloud");
+			trailList1.add("Criticals");
+			trailList1.add("DripLava");
+			trailList1.add("DripWater");
+			trailList1.add("Enchantment");
+			trailList1.add("Spark");
+			trailList1.add("Flame");
+			trailList1.add("HappyVillager");
+			trailList1.add("InstantSpell");
+			trailList1.add("LargeSmoke");
+			trailList1.add("Lava");
+			trailList1.add("MagicCrit");
+			trailList1.add("MobSpell");
+			trailList1.add("MobSpellAmbient");
+			trailList1.add("Note");
+			trailList1.add("Portal");
+			trailList1.add("RedDust");
+			trailList1.add("ColoredRedDust");
+			trailList1.add("Slime");
+			trailList1.add("SnowShovel");
+			trailList1.add("SnowballPoof");
+			trailList1.add("Spell");
+			trailList1.add("Splash");
+			trailList1.add("TownAura");
+			trailList1.add("Wake");
+			trailList1.add("WitchMagic");
+			trailList1.add("Hearts");
+			trailList1.add("EnderSignal");
+			trailList1.add("IconCrack");
+			trailList1.add("ClearAll");
+			Collections.sort(trailList1);
+			return trailList1;
 		}
 		if (args[0].equals("")) {
-			this.trailList2.clear();
-			this.trailList2.add("AngryVillager");
-			this.trailList2.add("Cloud");
-			this.trailList2.add("Criticals");
-			this.trailList2.add("DripLava");
-			this.trailList2.add("DripWater");
-			this.trailList2.add("Enchantment");
-			this.trailList2.add("Spark");
-			this.trailList2.add("Flame");
-			this.trailList2.add("HappyVillager");
-			this.trailList2.add("InstantSpell");
-			this.trailList2.add("LargeSmoke");
-			this.trailList2.add("Lava");
-			this.trailList2.add("MagicCrit");
-			this.trailList2.add("MobSpell");
-			this.trailList2.add("MobSpellAmbient");
-			this.trailList2.add("Note");
-			this.trailList2.add("Portal");
-			this.trailList2.add("RedDust");
-			this.trailList2.add("ColoredRedDust");
-			this.trailList2.add("Slime");
-			this.trailList2.add("SnowShovel");
-			this.trailList2.add("SnowballPoof");
-			this.trailList2.add("Spell");
-			this.trailList2.add("Splash");
-			this.trailList2.add("TownAura");
-			this.trailList2.add("Wake");
-			this.trailList2.add("WitchMagic");
-			this.trailList2.add("Hearts");
-			this.trailList2.add("IconCrack");
-			this.trailList2.add("EnderSignal");
-			this.trailList2.add("ClearAll");
-			for (String trails : this.trailList2) {
+			trailList2.clear();
+			trailList2.add("AngryVillager");
+			trailList2.add("Cloud");
+			trailList2.add("Criticals");
+			trailList2.add("DripLava");
+			trailList2.add("DripWater");
+			trailList2.add("Enchantment");
+			trailList2.add("Spark");
+			trailList2.add("Flame");
+			trailList2.add("HappyVillager");
+			trailList2.add("InstantSpell");
+			trailList2.add("LargeSmoke");
+			trailList2.add("Lava");
+			trailList2.add("MagicCrit");
+			trailList2.add("MobSpell");
+			trailList2.add("MobSpellAmbient");
+			trailList2.add("Note");
+			trailList2.add("Portal");
+			trailList2.add("RedDust");
+			trailList2.add("ColoredRedDust");
+			trailList2.add("Slime");
+			trailList2.add("SnowShovel");
+			trailList2.add("SnowballPoof");
+			trailList2.add("Spell");
+			trailList2.add("Splash");
+			trailList2.add("TownAura");
+			trailList2.add("Wake");
+			trailList2.add("WitchMagic");
+			trailList2.add("Hearts");
+			trailList2.add("IconCrack");
+			trailList2.add("EnderSignal");
+			trailList2.add("ClearAll");
+			for (String trails : trailList2) {
 				if (!trails.toLowerCase().startsWith(args[0].toLowerCase())) {
-					this.trailList2.remove(trails);
+					trailList2.remove(trails);
 				}
 			}
-			Collections.sort(this.trailList2);
-			return this.trailList2;
+			Collections.sort(trailList2);
+			return trailList2;
 		}
 
 		return null;
 	}
 
+	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender sender, Command cmd, String label,
 			String[] args) {
 		if (!(sender instanceof Player)) {
@@ -117,7 +119,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 			return true;
 		}
 		Player player = (Player) sender;
-		for (String string : this.main.getConfig().getStringList(
+		for (String string : main.getConfig().getStringList(
 				"disabledWorlds")) {
 			string.replace("[", "");
 			string.replace("]", "");
@@ -156,7 +158,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailAngryVillager.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "AngryVillager"));
@@ -167,7 +169,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(player);
 					Main.trailAngryVillager
 							.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "AngryVillager"));
@@ -185,13 +187,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "AngryVillager"));
@@ -205,11 +207,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailAngryVillager.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "AngryVillager"));
@@ -218,12 +220,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailAngryVillager.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "AngryVillager")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "AngryVillager"));
@@ -245,7 +247,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailCloud.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Cloud"));
@@ -255,7 +257,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailCloud.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Cloud"));
@@ -272,13 +274,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Cloud"));
@@ -290,12 +292,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailCloud.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1])
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Cloud"));
@@ -304,11 +306,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailCloud.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Cloud"));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Cloud"));
@@ -330,7 +332,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailCriticals.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Criticals"));
@@ -340,7 +342,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailCriticals.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Criticals"));
@@ -357,13 +359,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Criticals"));
@@ -376,11 +378,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailCriticals.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Criticals"));
@@ -389,12 +391,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailCriticals.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Criticals")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Criticals"));
@@ -416,7 +418,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailDripLava.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "DripLava"));
@@ -426,7 +428,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailDripLava.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "DripLava"));
@@ -443,13 +445,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "DripLava"));
@@ -462,11 +464,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailDripLava.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "DripLava"));
@@ -475,12 +477,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailDripLava.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "DripLava")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "DripLava"));
@@ -502,7 +504,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailDripWater.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "DripWater"));
@@ -512,7 +514,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailDripWater.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "DripWater"));
@@ -529,13 +531,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "DripWater"));
@@ -548,11 +550,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailDripWater.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "DripWater"));
@@ -561,12 +563,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailDripWater.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "DripWater")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "DripWater"));
@@ -589,7 +591,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailEnchantment.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Enchantment"));
@@ -599,7 +601,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailEnchantment.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Enchantment"));
@@ -616,13 +618,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Enchantment"));
@@ -636,11 +638,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailEnchantment.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Enchantment"));
@@ -649,12 +651,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailEnchantment.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Enchantment")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Enchantment"));
@@ -675,7 +677,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailSpark.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Spark"));
@@ -685,7 +687,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailSpark.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Spark"));
@@ -702,13 +704,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Spark"));
@@ -720,11 +722,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailSpark.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Spark"));
@@ -733,12 +735,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailSpark.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Spark")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Spark"));
@@ -759,14 +761,14 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailFlame.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Flame"));
 						return false;
 					}
 					Main.trailFlame.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Flame"));
@@ -783,13 +785,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Flame"));
@@ -801,11 +803,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailFlame.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Flame"));
@@ -814,12 +816,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailFlame.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Flame")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Flame"));
@@ -843,7 +845,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailHappyVillager.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "HappyVillager"));
@@ -854,7 +856,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(player);
 					Main.trailHappyVillager
 							.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "HappyVillager"));
@@ -872,13 +874,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "HappyVillager"));
@@ -892,11 +894,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailHappyVillager.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "HappyVillager"));
@@ -905,12 +907,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailHappyVillager.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "HappyVillager")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "HappyVillager"));
@@ -933,7 +935,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailInstantSpell.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "InstantSpell"));
@@ -943,7 +945,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailInstantSpell.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "InstantSpell"));
@@ -960,13 +962,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "InstantSpell"));
@@ -980,11 +982,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailInstantSpell.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "InstantSpell"));
@@ -993,12 +995,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailInstantSpell.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "InstantSpell")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "InstantSpell"));
@@ -1021,7 +1023,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailLargeSmoke.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "LargeSmoke"));
@@ -1031,7 +1033,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailLargeSmoke.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "LargeSmoke"));
@@ -1048,13 +1050,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "LargeSmoke"));
@@ -1068,11 +1070,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailLargeSmoke
 							.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "LargeSmoke"));
@@ -1081,12 +1083,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailLargeSmoke.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "LargeSmoke")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "LargeSmoke"));
@@ -1108,7 +1110,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailLava.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Lava"));
@@ -1118,7 +1120,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailLava.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Lava"));
@@ -1135,13 +1137,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Lava"));
@@ -1153,11 +1155,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailLava.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Lava"));
@@ -1166,11 +1168,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailLava.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�").replaceAll("%TrailName%", "Lava")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�").replaceAll("%TrailName%", "Lava"));
 				return false;
@@ -1191,7 +1193,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailMagicCrit.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "MagicCrit"));
@@ -1201,7 +1203,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailMagicCrit.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MagicCrit"));
@@ -1218,13 +1220,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MagicCrit"));
@@ -1237,11 +1239,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailMagicCrit.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MagicCrit"));
@@ -1250,12 +1252,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailMagicCrit.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "MagicCrit")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "MagicCrit"));
@@ -1279,7 +1281,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 
 						Main.trailMobSpell.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "MobSpell"));
@@ -1289,7 +1291,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailMobSpell.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MobSpell"));
@@ -1306,13 +1308,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MobSpell"));
@@ -1325,11 +1327,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailMobSpell.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MobSpell"));
@@ -1338,12 +1340,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailMobSpell.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "MobSpell")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "MobSpell"));
@@ -1367,7 +1369,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailMobSpellAmbient.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "MobSpellAmbient"));
@@ -1378,7 +1380,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(player);
 					Main.trailMobSpellAmbient.add(player.getUniqueId()
 							.toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MobSpellAmbient"));
@@ -1396,13 +1398,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MobSpellAmbient"));
@@ -1416,11 +1418,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailMobSpellAmbient.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "MobSpellAmbient"));
@@ -1429,12 +1431,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailMobSpellAmbient.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "MobSpellAmbient")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "MobSpellAmbient"));
@@ -1455,7 +1457,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailNote.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Note"));
@@ -1465,7 +1467,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailNote.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Note"));
@@ -1482,13 +1484,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Note"));
@@ -1500,11 +1502,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailNote.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Note"));
@@ -1513,11 +1515,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailNote.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�").replaceAll("%TrailName%", "Note")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�").replaceAll("%TrailName%", "Note"));
 				return false;
@@ -1538,7 +1540,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailPortal
 								.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Portal"));
@@ -1548,7 +1550,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailPortal.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Portal"));
@@ -1565,13 +1567,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Portal"));
@@ -1583,11 +1585,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailPortal.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Portal"));
@@ -1596,12 +1598,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailPortal.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Portal")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Portal"));
@@ -1623,7 +1625,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailRedDust.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "RedDust"));
@@ -1633,7 +1635,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailRedDust.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "RedDust"));
@@ -1650,13 +1652,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "RedDust"));
@@ -1668,11 +1670,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailRedDust.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "RedDust"));
@@ -1681,12 +1683,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailRedDust.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "RedDust")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "RedDust"));
@@ -1710,7 +1712,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailColoredRedDust.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "ColoredRedDust"));
@@ -1721,7 +1723,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(player);
 					Main.trailColoredRedDust.add(player.getUniqueId()
 							.toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "ColoredRedDust"));
@@ -1739,13 +1741,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "ColoredRedDust"));
@@ -1759,11 +1761,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailColoredRedDust.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "ColoredRedDust"));
@@ -1772,12 +1774,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailColoredRedDust.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "ColoredRedDust")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "ColoredRedDust"));
@@ -1798,7 +1800,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailSlime.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Slime"));
@@ -1808,7 +1810,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailSlime.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Slime"));
@@ -1825,13 +1827,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Slime"));
@@ -1843,11 +1845,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailSlime.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Slime"));
@@ -1856,12 +1858,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailSlime.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Slime")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Slime"));
@@ -1884,7 +1886,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailSnowShovel.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "SnowShovel"));
@@ -1894,7 +1896,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailSnowShovel.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "SnowShovel"));
@@ -1911,13 +1913,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "SnowShovel"));
@@ -1931,11 +1933,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailSnowShovel
 							.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "SnowShovel"));
@@ -1944,12 +1946,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailSnowShovel.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "SnowShovel")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "SnowShovel"));
@@ -1972,7 +1974,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailSnowballPoof.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "SnowballPoof"));
@@ -1982,7 +1984,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailSnowballPoof.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "SnowballPoof"));
@@ -1999,13 +2001,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "SnowballPoof"));
@@ -2019,11 +2021,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailSnowballPoof.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "SnowballPoof"));
@@ -2032,12 +2034,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailSnowballPoof.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "SnowballPoof")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "SnowballPoof"));
@@ -2058,7 +2060,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailSpell.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Spell"));
@@ -2068,7 +2070,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailSpell.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Spell"));
@@ -2085,13 +2087,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Spell"));
@@ -2103,11 +2105,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailSpell.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Spell"));
@@ -2116,12 +2118,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailSpell.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Spell")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Spell"));
@@ -2143,7 +2145,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailSplash
 								.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Splash"));
@@ -2153,7 +2155,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailSplash.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Splash"));
@@ -2170,13 +2172,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Splash"));
@@ -2188,11 +2190,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailSplash.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Splash"));
@@ -2201,12 +2203,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailSplash.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Splash")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Splash"));
@@ -2228,7 +2230,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailTownAura.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "TownAura"));
@@ -2238,7 +2240,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailTownAura.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "TownAura"));
@@ -2255,13 +2257,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "TownAura"));
@@ -2274,11 +2276,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailTownAura.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "TownAura"));
@@ -2287,12 +2289,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailTownAura.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "TownAura")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "TownAura"));
@@ -2313,7 +2315,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 								.getBoolean("oneTrailAtATime"))
 							Methodes.clearTrails(player);
 						Main.trailWake.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Wake"));
@@ -2323,7 +2325,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailWake.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Wake"));
@@ -2340,13 +2342,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Wake"));
@@ -2358,11 +2360,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailWake.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Wake"));
@@ -2371,11 +2373,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailWake.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�").replaceAll("%TrailName%", "Wake")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�").replaceAll("%TrailName%", "Wake"));
 				return false;
@@ -2398,7 +2400,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailWitchMagic.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "WitchMagic"));
@@ -2408,7 +2410,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailWitchMagic.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "WitchMagic"));
@@ -2425,13 +2427,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "WitchMagic"));
@@ -2445,11 +2447,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailWitchMagic
 							.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "WitchMagic"));
@@ -2458,12 +2460,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailWitchMagic.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "WitchMagic")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "WitchMagic"));
@@ -2486,7 +2488,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailHearts
 								.remove(player.getUniqueId().toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "Hearts"));
@@ -2496,7 +2498,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailHearts.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Hearts"));
@@ -2513,13 +2515,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Hearts"));
@@ -2531,11 +2533,11 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailHearts.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "Hearts"));
@@ -2544,12 +2546,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailHearts.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Hearts")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "Hearts"));
@@ -2572,7 +2574,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailEnderSignal.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "EnderSignal"));
@@ -2582,7 +2584,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailEnderSignal.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "EnderSignal"));
@@ -2599,13 +2601,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayer(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "EnderSignal"));
@@ -2619,12 +2621,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailEnderSignal.remove(target.getUniqueId()
 							.toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1])
 							.replaceAll("%TrailName%", "EnderSignal"));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "EnderSignal"));
@@ -2633,12 +2635,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailEnderSignal.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "EnderSignal")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "EnderSignal"));
@@ -2660,7 +2662,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailIconCrack.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "IconCrack"));
@@ -2670,7 +2672,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailIconCrack.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "IconCrack"));
@@ -2687,13 +2689,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayer(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "IconCrack"));
@@ -2706,12 +2708,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 						Methodes.clearTrails(target);
 					Main.trailIconCrack.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1])
 							.replaceAll("%TrailName%", "IconCrack"));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "IconCrack"));
@@ -2720,12 +2722,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailIconCrack.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "IconCrack")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "IconCrack"));
@@ -2748,7 +2750,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							Methodes.clearTrails(player);
 						Main.trailBlockBreak.remove(player.getUniqueId()
 								.toString());
-						player.sendMessage(this.main.getConfig()
+						player.sendMessage(main.getConfig()
 								.getString("Commands-removeTrailMessage")
 								.replaceAll("&", "�")
 								.replaceAll("%TrailName%", "BlockBreak"));
@@ -2758,7 +2760,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 							.getBoolean("oneTrailAtATime"))
 						Methodes.clearTrails(player);
 					Main.trailBlockBreak.add(player.getUniqueId().toString());
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-selectTrailMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "BlockBreak"));
@@ -2775,13 +2777,13 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayer(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "BlockBreak"));
@@ -2795,12 +2797,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 					Main.trailBlockBreak
 							.remove(target.getUniqueId().toString());
 
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailSenderMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%Target%", args[1])
 							.replaceAll("%TrailName%", "BlockBreak"));
-					target.sendMessage(this.main.getConfig()
+					target.sendMessage(main.getConfig()
 							.getString("Commands-removeTrailTargetMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "BlockBreak"));
@@ -2809,12 +2811,12 @@ public class Trail implements CommandExecutor, TabCompleter {
 				if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
 					Methodes.clearTrails(target);
 				Main.trailBlockBreak.add(target.getUniqueId().toString());
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailSenderMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "BlockBreak")
 						.replaceAll("%Target%", args[1]));
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("Commands-selectTrailTargetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%TrailName%", "BlockBreak"));
@@ -2829,7 +2831,7 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				if (args.length == 1) {
 					Methodes.clearTrails(player);
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("ClearAll-message").replaceAll("&", "�")
 							.replaceAll("%TrailName%", "ClearAll"));
 					return true;
@@ -2842,24 +2844,24 @@ public class Trail implements CommandExecutor, TabCompleter {
 				}
 				Player target = Bukkit.getServer().getPlayerExact(args[1]);
 				if (target == null) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("noTargetMessage").replaceAll("&", "�")
 							.replaceAll("%Target%", args[1]));
 					return false;
 				}
 				if (player.getName().equals(args[1])) {
-					player.sendMessage(this.main.getConfig()
+					player.sendMessage(main.getConfig()
 							.getString("targetSelfMessage")
 							.replaceAll("&", "�")
 							.replaceAll("%TrailName%", "ClearAll"));
 					return false;
 				}
 				Methodes.clearTrails(target);
-				target.sendMessage(this.main.getConfig()
+				target.sendMessage(main.getConfig()
 						.getString("ClearAll-targetMessage")
 						.replaceAll("&", "�")
 						.replaceAll("%Sender%", player.getName()));
-				player.sendMessage(this.main.getConfig()
+				player.sendMessage(main.getConfig()
 						.getString("ClearAll-senderMessage")
 						.replaceAll("&", "�").replaceAll("%Target%", args[1]));
 				Methodes.saveTrails();
@@ -2873,7 +2875,9 @@ public class Trail implements CommandExecutor, TabCompleter {
 
 	@SuppressWarnings("unused")
 	private void checkTrailLimits(Player target) {
-		if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime"))
+		if (Main.getPlugin().getConfig().getBoolean("oneTrailAtATime")) {
 			Methodes.clearTrails(target);
+		}
 	}
+
 }
