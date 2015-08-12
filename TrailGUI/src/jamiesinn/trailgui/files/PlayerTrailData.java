@@ -132,12 +132,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's AngryVillager value.
+	 * Checks if the player has AngryVillager set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getAngryVillager() {
+	public boolean hasAngryVillager() {
 		return getFile().getBoolean("AngryVillager");
 	}
 	
@@ -152,12 +152,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Cloud value.
+	 * Checks if the player has Cloud set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getCloud() {
+	public boolean hasCloud() {
 		return getFile().getBoolean("Cloud");
 	}
 	
@@ -172,12 +172,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Criticals value.
+	 * Checks if the player has Criticals set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getCriticals() {
+	public boolean hasCriticals() {
 		return getFile().getBoolean("Criticals");
 	}
 	
@@ -192,12 +192,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's DripLava value.
+	 * Checks if the player has DripLava set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getDripLava() {
+	public boolean hasDripLava() {
 		return getFile().getBoolean("DripLava");
 	}
 	
@@ -212,12 +212,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's DripWater value.
+	 * Checks if the player has DripWater set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getDripWater() {
+	public boolean hasDripWater() {
 		return getFile().getBoolean("DripWater");
 	}
 	
@@ -232,12 +232,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Spark value.
+	 * Checks if the player has Spark set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getSpark() {
+	public boolean hasSpark() {
 		return getFile().getBoolean("Spark");
 	}
 	
@@ -252,12 +252,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Flame value.
+	 * Checks if the player has Flame set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getFlame() {
+	public boolean hasFlame() {
 		return getFile().getBoolean("Flame");
 	}
 	
@@ -272,12 +272,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's HappyVillager value.
+	 * Checks if the player has HappyVillager set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getHappyVillager() {
+	public boolean hasHappyVillager() {
 		return getFile().getBoolean("HappyVillager");
 	}
 	
@@ -292,12 +292,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's InstantSpell value.
+	 * Checks if the player has InstantSpell set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getInstantSpell() {
+	public boolean hasInstantSpell() {
 		return getFile().getBoolean("InstantSpell");
 	}
 	
@@ -312,12 +312,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's LargeSmoke value.
+	 * Checks if the player has LargeSmoke set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getLargeSmoke() {
+	public boolean hasLargeSmoke() {
 		return getFile().getBoolean("LargeSmoke");
 	}
 	
@@ -332,12 +332,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Lava value.
+	 * Checks if the player has Lava set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getLava() {
+	public boolean hasLava() {
 		return getFile().getBoolean("Lava");
 	}
 	
@@ -352,12 +352,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's MagicCrit value.
+	 * Checks if the player has MagicCrit set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getMagicCrit() {
+	public boolean hasMagicCrit() {
 		return getFile().getBoolean("MagicCrit");
 	}
 	
@@ -372,12 +372,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's MobSpell value.
+	 * Checks if the player has MobSpell set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getMobSpell() {
+	public boolean hasMobSpell() {
 		return getFile().getBoolean("MobSpell");
 	}
 	
@@ -392,12 +392,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's MobSpellAmbient value.
+	 * Checks if the player has MobSpellAmbient set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getMobSpellAmbient() {
+	public boolean hasMobSpellAmbient() {
 		return getFile().getBoolean("MobSpellAmbient");
 	}
 	
@@ -412,12 +412,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Note value.
+	 * Checks if the player has Note set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getNote() {
+	public boolean hasNote() {
 		return getFile().getBoolean("Note");
 	}
 	
@@ -432,12 +432,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Portal value.
+	 * Checks if the player has Portal set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getPortal() {
+	public boolean hasPortal() {
 		return getFile().getBoolean("Portal");
 	}
 	
@@ -452,12 +452,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's RedDust value.
+	 * Checks if the player has RedDust set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getRedDust() {
+	public boolean hasRedDust() {
 		return getFile().getBoolean("RedDust");
 	}
 	
@@ -472,12 +472,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's ColoredRedDust value.
+	 * Checks if the player has ColoredRedDust set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getColoredRedDust() {
+	public boolean hasColoredRedDust() {
 		return getFile().getBoolean("ColoredRedDust");
 	}
 	
@@ -492,12 +492,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Slime value.
+	 * Checks if the player has Slime set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getSlime() {
+	public boolean hasSlime() {
 		return getFile().getBoolean("Slime");
 	}
 	
@@ -512,12 +512,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's SnowShovel value.
+	 * Checks if the player has SnowShovel set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getSnowShovel() {
+	public boolean hasSnowShovel() {
 		return getFile().getBoolean("SnowShovel");
 	}
 	
@@ -532,12 +532,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's SnowballPoof value.
+	 * Checks if the player has SnowballPoof set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getSnowballPoof() {
+	public boolean hasSnowballPoof() {
 		return getFile().getBoolean("SnowballPoof");
 	}
 	
@@ -552,12 +552,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Spell value.
+	 * Checks if the player has Spell set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getSpell() {
+	public boolean hasSpell() {
 		return getFile().getBoolean("Spell");
 	}
 	
@@ -572,12 +572,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Splash value.
+	 * Checks if the player has Splash set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getSplash() {
+	public boolean hasSplash() {
 		return getFile().getBoolean("Splash");
 	}
 	
@@ -592,12 +592,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's TownAura value.
+	 * Checks if the player has TownAura set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getTownAura() {
+	public boolean hasTownAura() {
 		return getFile().getBoolean("TownAura");
 	}
 	
@@ -612,12 +612,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Wake value.
+	 * Checks if the player has Wake set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getWake() {
+	public boolean hasWake() {
 		return getFile().getBoolean("Wake");
 	}
 	
@@ -632,12 +632,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's WitchMagic value.
+	 * Checks if the player has WitchMagic set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getWitchMagic() {
+	public boolean hasWitchMagic() {
 		return getFile().getBoolean("WitchMagic");
 	}
 	
@@ -652,12 +652,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's Hearts value.
+	 * Checks if the player has Hearts set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getHearts() {
+	public boolean hasHearts() {
 		return getFile().getBoolean("Hearts");
 	}
 	
@@ -672,12 +672,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's EnderSignal value.
+	 * Checks if the player has EnderSignal set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getEnderSignal() {
+	public boolean hasEnderSignal() {
 		return getFile().getBoolean("EnderSignal");
 	}
 	
@@ -692,12 +692,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's IconCrack value.
+	 * Checks if the player has IconCrack set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getIconCrack() {
+	public boolean hasIconCrack() {
 		return getFile().getBoolean("IconCrack");
 	}
 	
@@ -712,12 +712,12 @@ public class PlayerTrailData {
 	}
 	
 	/**
-	 * Gets the player's BlockBreak value.
+	 * Checks if the player has BlockBreak set to true.
 	 * 
 	 * @return true if true, otherwise false
 	 * @author Jesse McCullough (HeadGam3z)
 	 */
-	public boolean getBlockBreak() {
+	public boolean hasBlockBreak() {
 		return getFile().getBoolean("BlockBreak");
 	}
 	
