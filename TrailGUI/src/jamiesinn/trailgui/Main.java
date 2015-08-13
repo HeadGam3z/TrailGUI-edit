@@ -1,17 +1,16 @@
 package jamiesinn.trailgui;
 
-import jamiesinn.trailgui.commands.Trail;
 import jamiesinn.trailgui.commands.TrailGUI;
 import jamiesinn.trailgui.commands.Trails;
-import jamiesinn.trailgui.files.TrailData;
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 public class Main extends JavaPlugin {
-	public static Main plugin;
+	
+	public static Main main;
 	public static List<String> trailAngryVillager = new ArrayList<String>();
 	public static List<String> trailCloud = new ArrayList<String>();
 	public static List<String> trailCriticals = new ArrayList<String>();
@@ -45,26 +44,22 @@ public class Main extends JavaPlugin {
 	public static List<String> trailBlockBreak = new ArrayList<String>();
 
 	public static Main getPlugin() {
-		return plugin;
+		return main;
 	}
-
+	
 	@Override
 	public void onEnable() {
-		getServer().getPluginManager()
-				.registerEvents(new Listeners(this), this);
-		getCommand("Trail").setExecutor(new Trail(this));
+		getServer().getPluginManager().registerEvents(new Listeners(this), this);
 		getCommand("Trails").setExecutor(new Trails(this));
 		getCommand("TrailGUI").setExecutor(new TrailGUI(this));
-
 		getConfig().options().copyDefaults(true);
 		saveDefaultConfig();
-
-		plugin = this;
-		TrailData.createFile();
-		TrailData.config = YamlConfiguration.loadConfiguration(TrailData.file);
+		main = this;
 	}
 
 	@Override
 	public void onDisable() {
+		main = null;
 	}
+	
 }

@@ -73,6 +73,8 @@ public class PlayerTrailData {
 		getFile().addDefault("IconCrack", false);
 		getFile().addDefault("BlockBreak", false);
 		getFile().addDefault("Enchantment", false);
+		getFile().options().copyDefaults(true);
+		saveFile();
 	}
 	
 	/**

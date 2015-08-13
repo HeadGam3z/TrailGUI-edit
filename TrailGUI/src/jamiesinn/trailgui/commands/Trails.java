@@ -2,6 +2,7 @@ package jamiesinn.trailgui.commands;
 
 import jamiesinn.trailgui.Main;
 import jamiesinn.trailgui.Methodes;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,7 +10,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Trails implements CommandExecutor {
-	Main main;
+	
+	private Main main;
 
 	public Trails(Main main) {
 		this.main = main;
@@ -24,8 +26,7 @@ public class Trails implements CommandExecutor {
 				return true;
 			}
 			Player player = (Player) sender;
-			for (String string : this.main.getConfig().getStringList(
-					"disabledWorlds")) {
+			for (String string : main.getConfig().getStringList("disabledWorlds")) {
 				string.replace("[", "");
 				string.replace("]", "");
 				if (string.equals(player.getWorld().getName())) {
@@ -36,11 +37,9 @@ public class Trails implements CommandExecutor {
 					return false;
 				}
 				if (!player.hasPermission("trailgui.commands.trails")) {
-					player.sendMessage(Main.getPlugin().getConfig()
-							.getString("Commands-denyPermissionMessage")
-							.replaceAll("&", "§"));
-					if (Main.getPlugin().getConfig()
-							.getBoolean("closeInventoryOnDenyPermission")) {
+					String deny = main.getConfig().getString("Commands-denyPermissionMessage");
+					player.sendMessage(ChatColor.translateAlternateColorCodes('&', deny));
+					if (main.getConfig().getBoolean("closeInventoryOnDenyPermission")) {
 						player.closeInventory();
 					}
 					return false;
@@ -50,4 +49,5 @@ public class Trails implements CommandExecutor {
 		}
 		return false;
 	}
+	
 }
