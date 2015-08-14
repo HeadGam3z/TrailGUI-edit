@@ -60,11 +60,12 @@ public class Listeners implements Listener {
 			return;
 		}
 		Player player = (Player) event.getWhoClicked();
-		PlayerTrailData playerEffects = new PlayerTrailData(player);
 		boolean closeOnDeny = getBoolean("closeInventoryOnDenyPermission");
 		if (getBoolean("oneTrailAtATime") && !effect.equals(Methodes.itemNextPage())) {
 			Methodes.clearTrails(player);
+			System.out.println("cleared");
 		}
+		PlayerTrailData playerEffects = new PlayerTrailData(player); // to get the latest changes of clearing trails, I moved it
 		if (effect.equals(Methodes.itemAngryVillager())) {
 			if (!player.hasPermission("trailgui.inventory.angryvillager")) {
 				player.sendMessage(getNoPermission());

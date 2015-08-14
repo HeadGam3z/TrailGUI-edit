@@ -6,6 +6,8 @@ import jamiesinn.trailgui.commands.Trails;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -55,7 +57,11 @@ public class Main extends JavaPlugin {
 		getConfig().options().copyDefaults(true);
 		saveDefaultConfig();
 		main = this;
-	}
+		//  in case of server reload
+		for (Player player : Bukkit.getOnlinePlayers()) {
+			Methodes.restoreTrails(player);
+		}
+ 	}
 
 	@Override
 	public void onDisable() {
