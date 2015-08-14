@@ -25,6 +25,7 @@ public class Methodes {
 		PlayerTrailData playerEffects = new PlayerTrailData(player);
 		playerEffects.setAngryVillager(false);
 		playerEffects.setCloud(false);
+		playerEffects.setColoredRedDust(false);
 		playerEffects.setCriticals(false);
 		playerEffects.setDripLava(false);
 		playerEffects.setDripWater(false);
