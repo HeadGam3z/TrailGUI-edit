@@ -24,6 +24,7 @@ public class Methodes {
 	public static void clearTrails(Player player) {
 		PlayerTrailData playerEffects = new PlayerTrailData(player);
 		playerEffects.setAngryVillager(false);
+		playerEffects.setBlockBreak (false);
 		playerEffects.setCloud(false);
 		playerEffects.setColoredRedDust(false);
 		playerEffects.setCriticals(false);
